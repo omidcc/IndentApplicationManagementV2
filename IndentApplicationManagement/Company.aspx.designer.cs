@@ -13,6 +13,15 @@ namespace IndentApplicationManagement {
     public partial class Company {
         
         /// <summary>
+        /// RadScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
+        
+        /// <summary>
         /// companyNameTextBox control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace IndentApplicationManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText companyNameTextBox;
+        
+        /// <summary>
+        /// RadTextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox RadTextBox1;
         
         /// <summary>
         /// addressTextBox control.
@@ -76,13 +94,13 @@ namespace IndentApplicationManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText updateByTextBox;
         
         /// <summary>
-        /// datepicker control.
+        /// datetimepicker control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl datepicker;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText datetimepicker;
         
         /// <summary>
         /// isActiveCheckBox control.

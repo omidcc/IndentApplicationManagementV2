@@ -31,7 +31,7 @@ namespace IndentApplicationManagement
             newCompany.Web = webTextBox.Value;
             newCompany.LogoPath = logopathTextBox.Value;
             newCompany.UpdateBy = int.Parse(updateByTextBox.Value);
-            newCompany.UpdateDate = DateTime.Parse(datepicker.Value);
+            newCompany.UpdateDate = DateTime.Parse(datetimepicker.Value);
             newCompany.IsActive = isActiveCheckBox.Checked;
           
            

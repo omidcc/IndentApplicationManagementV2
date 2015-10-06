@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="IndentApplicationManagement.Company" %>
+<%@ Import Namespace="System.Windows.Forms" %>
 
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
@@ -40,13 +41,15 @@ folder instead of downloading all of them to reduce the load. -->
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-    <script src="Kendo/js/kendo.all.min.js"></script>
-    <script src="Kendo/js/jquery.min.js"></script>
-    <link href="Kendo/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet" />
+  <link href="Kendo/styles/kendo.rtl.css" rel="stylesheet" />
+        <link href="Kendo/styles/kendo.common.min.css" rel="stylesheet" />
+        <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet" />
+        <link href="Kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <form runat="server" class="form-inline">
+    <form runat="server" class="form-group" role="form">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+
         <div class="wrapper">
             <header class="main-header">
                 <a href="index2.html" class="logo">
@@ -253,89 +256,123 @@ folder instead of downloading all of them to reduce the load. -->
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <div class="container">
-                    <div >
+                    <div>
                         <h1><strong>Add your Comapny here</strong></h1>
                     </div>
-                    <table class="table table-condensed">
-                        
-                         <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Company Name</label>
-                                    <input type="text" id="companyNameTextBox" placeholder="Company Name" class="form-control" runat="server" clientidmode="Static"/>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Address</label>
-                                    <input type="text" id="addressTextBox" placeholder="Address" class="form-control" runat="server" clientidmode="Static" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Phone </label>
-                                    <input type="text" id="phoneNoTextBox" placeholder="Phone" class="form-control" runat="server" clientidmode="Static" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Email</label>
-                                    <input type="email" id="emailTextBox" placeholder="Email" class="form-control" runat="server" clientidmode="Static" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Web</label>
-                                    <input type="text" id="webTextBox" placeholder="Web" class="form-control" runat="server" clientidmode="Static" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Logo Path</label>
-                                    <input type="text" id="logopathTextBox" placeholder="Logo Path" class="form-control" runat="server" clientidmode="Static" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Update By</label>
-                                    <input type="text" id="updateByTextBox" placeholder="Upadet By" class="form-control" runat="server" clientidmode="Static" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Update Date</label>
-                                    <input type="date" id="datepicker" class="datepicker" date-date-format="mm/dd/yy" runat="server" clientidmode="Static" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group">
-                                    <label class="form-control">Is Active ? </label>
-                                    <asp:CheckBox ID="isActiveCheckBox" class="checkbox" runat="server" />
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="companyNameTextBox" class="col-sm-2 control-label">Company Name</label>
+                                            <input type="text" id="companyNameTextBox" placeholder="Company Name" class="form-control" runat="server" clientidmode="Static" /><telerik:RadTextBox ID="RadTextBox1" runat="server"></telerik:RadTextBox>
+
+                                        </div>
+                                    </td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="addressTextBox" class="col-sm-2 control-label">Address</label>
+                                            <input type="text" id="addressTextBox" placeholder="Address" class="form-control" runat="server" clientidmode="Static" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Phone </label>
+                                            <input type="text" id="phoneNoTextBox" placeholder="Phone" class="form-control" runat="server" clientidmode="Static" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Email</label>
+                                            <input type="email" id="emailTextBox" placeholder="Email" class="form-control" runat="server" clientidmode="Static" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Web</label>
+                                            <input type="text" id="webTextBox" placeholder="Web" class="form-control" runat="server" clientidmode="Static" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Logo Path</label>
+                                            <input type="text" id="logopathTextBox" placeholder="Logo Path" class="form-control" runat="server" clientidmode="Static" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Update By</label>
+                                            <input type="text" ID="updateByTextBox" placeholder="Upadet By" class="form-control" runat="server" clientidmode="Static" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Update Date</label>
+                                            <input id="datetimepicker" data-provide="datepicker" runat="server" clientidmode="Static" style="width: 20%;" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Is Active ? </label>
+                                            <asp:CheckBox ID="isActiveCheckBox" class="checkbox" runat="server" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
 
             </div>
 
+
         </div>
+
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
                 <b>Version</b> 2.3.0
@@ -521,7 +558,7 @@ immediately after the control sidebar -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- Morris.js charts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-        <script src="plugins/morris/morris.min.js"></script>
+       <script src="plugins/morris/morris.min.js"></script>
         <!-- Sparkline -->
         <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
         <!-- jvectormap -->
@@ -546,11 +583,21 @@ immediately after the control sidebar -->
         <script src="dist/js/pages/dashboard.js"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="dist/js/demo.js"></script>
+        <script src="Kendo/examples/content/shared/js/products.js"></script>
+
         <script>
+
             $(document).ready(function () {
+
                 $('.datepicker').datepicker();
             });
-        </script>
+
+         </script>
+          
+      
+       
+
+
     </form>
 </body>
 </html>
