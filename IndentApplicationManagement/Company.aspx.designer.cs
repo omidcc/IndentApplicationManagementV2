@@ -19,7 +19,7 @@ namespace IndentApplicationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox companyNameTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText companyNameTextBox;
         
         /// <summary>
         /// addressTextBox control.
@@ -28,7 +28,7 @@ namespace IndentApplicationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addressTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText addressTextBox;
         
         /// <summary>
         /// phoneNoTextBox control.
@@ -37,7 +37,7 @@ namespace IndentApplicationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox phoneNoTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText phoneNoTextBox;
         
         /// <summary>
         /// emailTextBox control.
@@ -46,7 +46,7 @@ namespace IndentApplicationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl emailTextBox;
         
         /// <summary>
         /// webTextBox control.
@@ -55,7 +55,7 @@ namespace IndentApplicationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox webTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText webTextBox;
         
         /// <summary>
         /// logopathTextBox control.
@@ -64,7 +64,7 @@ namespace IndentApplicationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox logopathTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText logopathTextBox;
         
         /// <summary>
         /// updateByTextBox control.
@@ -73,25 +73,16 @@ namespace IndentApplicationManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox updateByTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText updateByTextBox;
         
         /// <summary>
-        /// RadScriptManager1 control.
+        /// datepicker control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
-        
-        /// <summary>
-        /// RadDatePicker1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadDatePicker RadDatePicker1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl datepicker;
         
         /// <summary>
         /// isActiveCheckBox control.
@@ -101,50 +92,5 @@ namespace IndentApplicationManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox isActiveCheckBox;
-        
-        /// <summary>
-        /// btnPrev control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPrev;
-        
-        /// <summary>
-        /// btnNext control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNext;
-        
-        /// <summary>
-        /// lblId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblId;
-        
-        /// <summary>
-        /// btnSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
-        
-        /// <summary>
-        /// btnClear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClear;
     }
 }

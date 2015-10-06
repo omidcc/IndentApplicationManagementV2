@@ -24,17 +24,16 @@ namespace IndentApplicationManagement
         {
             CompanyBase newCompany=new CompanyBase();
 
-            newCompany.CompanyName = companyNameTextBox.Text;
-            newCompany.Address = addressTextBox.Text;
-            newCompany.Phone = phoneNoTextBox.Text;
-            newCompany.Email = emailTextBox.Text;
-            newCompany.Web = webTextBox.Text;
-            newCompany.LogoPath = logopathTextBox.Text;
-            newCompany.UpdateBy = int.Parse(updateByTextBox.Text);
-            newCompany.UpdateDate = DateTime.Parse(RadDatePicker1.SelectedDate.ToString());
+            newCompany.CompanyName = "";
+            newCompany.Address = addressTextBox.Value;
+            newCompany.Phone = phoneNoTextBox.Value;
+            newCompany.Email = emailTextBox.Value;
+            newCompany.Web = webTextBox.Value;
+            newCompany.LogoPath = logopathTextBox.Value;
+            newCompany.UpdateBy = int.Parse(updateByTextBox.Value);
+            newCompany.UpdateDate = DateTime.Parse(datepicker.Value);
             newCompany.IsActive = isActiveCheckBox.Checked;
-            if (!isNewEntry)
-                newCompany.CompanyId = int.Parse(lblId.Text);
+          
            
             newCompany.InsertCompany();
             
@@ -66,11 +65,11 @@ namespace IndentApplicationManagement
 
         public void Clear()
         {
-            companyNameTextBox.Text =
-                addressTextBox.Text =
-                    emailTextBox.Text =
-                        webTextBox.Text = phoneNoTextBox.Text = logopathTextBox.Text = updateByTextBox.Text = "";
-            RadDatePicker1.Clear();
+            companyNameTextBox.Value =
+                addressTextBox.Value =
+                    emailTextBox.Value =
+                        webTextBox.Value = phoneNoTextBox.Value = logopathTextBox.Value = updateByTextBox.Value = "";
+            
             isActiveCheckBox.Checked = false;
 
         }

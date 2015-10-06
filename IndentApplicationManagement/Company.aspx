@@ -46,7 +46,7 @@ folder instead of downloading all of them to reduce the load. -->
     <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet" />
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <form runat="server">
+    <form runat="server" class="form-inline">
         <div class="wrapper">
             <header class="main-header">
                 <a href="index2.html" class="logo">
@@ -252,314 +252,262 @@ folder instead of downloading all of them to reduce the load. -->
             </aside>
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                <table class="mainTable">
-            <tr class="trHeader">
-                <td colspan="3" >
-                    <h1>Company Add</h1></td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Company Name</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:TextBox ID="companyNameTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Address</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:TextBox ID="addressTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Phone</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:TextBox ID="phoneNoTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Email</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:TextBox ID="emailTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Web</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:TextBox ID="webTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Logo Path</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:TextBox ID="logopathTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Update By</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:TextBox ID="updateByTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Update Date</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+                <div class="container">
+                    <div >
+                        <h1><strong>Add your Comapny here</strong></h1>
+                    </div>
+                    <table class="table table-condensed">
                         
-                    </telerik:RadScriptManager> 
-                    <telerik:RadDatePicker ID="RadDatePicker1" runat="server"></telerik:RadDatePicker>
-                    <%--<asp:TextBox ID="updateDateTextBox"
-            runat="server" Width="303px" Font-Names="SutonnyMJ"></asp:TextBox>--%>
-                </td>
-                
-            </tr>
-            <tr>
-                <td class="tdCaption" style="width: 35%">
-                    Is Active</td>
-                <td class="style3">
-                    :</td>
-                <td class="tdControl">
-                    <asp:CheckBox ID="isActiveCheckBox" runat="server" Text="Is Active?"/>
-                   
-                </td>
-            </tr>
-            <tr>
-                <td class="style4">
-                    <asp:Button ID="btnPrev" runat="server"  
-                        Text="&lt;&lt;" onclick="btnPrev_Click" CssClass="button" Visible="False" />
-                    <asp:Button ID="btnNext" runat="server"  
-                        Text="&gt;&gt;" onclick="btnNext_Click" CssClass="button" Visible="False"  />
-                </td>
-                <td class="style3">
-                    <asp:Label ID="lblId" runat="server" Visible="False"></asp:Label>
-                </td>
-                <td style="text-align: left">
-                    <asp:Button ID="btnSave" runat="server" CssClass="button"  
-                        Text="Save Company" Font-Names="SutonnyMJ" onclick="btnSave_Click" />
-                    <asp:Button ID="btnClear" runat="server" CssClass="button"  
-                        Text="Clear Informations" Font-Names="SutonnyMJ" Width="233px" onclick="btnClear_Click" />
-                </td>
-            </tr>
-            <tr>
-                <td class="style4">
-                    &nbsp;</td>
-                <td class="style3">
-                    &nbsp;</td>
-                <td style="text-align: left">
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td class="style4">
-                    &nbsp;</td>
-                <td class="style3">
-                    &nbsp;</td>
-                <td style="text-align: left">
-                    &nbsp;</td>
-            </tr>
-        </table>
+                         <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Company Name</label>
+                                    <input type="text" id="companyNameTextBox" placeholder="Company Name" class="form-control" runat="server" clientidmode="Static"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Address</label>
+                                    <input type="text" id="addressTextBox" placeholder="Address" class="form-control" runat="server" clientidmode="Static" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Phone </label>
+                                    <input type="text" id="phoneNoTextBox" placeholder="Phone" class="form-control" runat="server" clientidmode="Static" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Email</label>
+                                    <input type="email" id="emailTextBox" placeholder="Email" class="form-control" runat="server" clientidmode="Static" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Web</label>
+                                    <input type="text" id="webTextBox" placeholder="Web" class="form-control" runat="server" clientidmode="Static" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Logo Path</label>
+                                    <input type="text" id="logopathTextBox" placeholder="Logo Path" class="form-control" runat="server" clientidmode="Static" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Update By</label>
+                                    <input type="text" id="updateByTextBox" placeholder="Upadet By" class="form-control" runat="server" clientidmode="Static" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Update Date</label>
+                                    <input type="date" id="datepicker" class="datepicker" date-date-format="mm/dd/yy" runat="server" clientidmode="Static" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label class="form-control">Is Active ? </label>
+                                    <asp:CheckBox ID="isActiveCheckBox" class="checkbox" runat="server" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
             </div>
-            <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    <b>Version</b> 2.3.0
-                </div>
-                <strong>Copyright &copy; 2015 <a href="http://balancika.com">Balancika Outsourcing</a>.</strong> All rights reserved.
-            </footer>
-            <!-- Control Sidebar -->
-            <aside class="control-sidebar control-sidebar-dark">
-                <!-- Create the tabs -->
-                <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                    <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                    <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <!-- Home tab content -->
-                    <div class="tab-pane" id="control-sidebar-home-tab">
-                        <h3 class="control-sidebar-heading">Recent Activity</h3>
-                        <ul class="control-sidebar-menu">
-                            <li>
-                                <a href="javascript::;">
-                                    <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                                    <div class="menu-info">
-                                        <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                                        <p>Will be 23 on April 24th</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript::;">
-                                    <i class="menu-icon fa fa-user bg-yellow"></i>
-                                    <div class="menu-info">
-                                        <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                                        <p>New phone +1(800)555-1234</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript::;">
-                                    <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                                    <div class="menu-info">
-                                        <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                                        <p>nora@example.com</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript::;">
-                                    <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                                    <div class="menu-info">
-                                        <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                                        <p>Execution time 5 seconds</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- /.control-sidebar-menu -->
-                        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                        <ul class="control-sidebar-menu">
-                            <li>
-                                <a href="javascript::;">
-                                    <h4 class="control-sidebar-subheading">Custom Template Design
-                                    <span class="label label-danger pull-right">70%</span>
-                                    </h4>
-                                    <div class="progress progress-xxs">
-                                        <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript::;">
-                                    <h4 class="control-sidebar-subheading">Update Resume
-                                    <span class="label label-success pull-right">95%</span>
-                                    </h4>
-                                    <div class="progress progress-xxs">
-                                        <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript::;">
-                                    <h4 class="control-sidebar-subheading">Laravel Integration
-                                    <span class="label label-warning pull-right">50%</span>
-                                    </h4>
-                                    <div class="progress progress-xxs">
-                                        <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript::;">
-                                    <h4 class="control-sidebar-subheading">Back End Framework
-                                    <span class="label label-primary pull-right">68%</span>
-                                    </h4>
-                                    <div class="progress progress-xxs">
-                                        <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- /.control-sidebar-menu -->
-                    </div>
-                    <!-- /.tab-pane -->
-                    <!-- Stats tab content -->
-                    <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-                    <!-- /.tab-pane -->
-                    <!-- Settings tab content -->
-                    <div class="tab-pane" id="control-sidebar-settings-tab">
-                        <form method="post">
-                            <h3 class="control-sidebar-heading">General Settings</h3>
-                            <div class="form-group">
-                                <label class="control-sidebar-subheading">
-                                    Report panel usage
-                                <input type="checkbox" class="pull-right" checked>
-                                </label>
-                                <p>
-                                    Some information about this general settings option
-                                </p>
-                            </div>
-                            <!-- /.form-group -->
-                            <div class="form-group">
-                                <label class="control-sidebar-subheading">
-                                    Allow mail redirect
-                                <input type="checkbox" class="pull-right" checked>
-                                </label>
-                                <p>
-                                    Other sets of options are available
-                                </p>
-                            </div>
-                            <!-- /.form-group -->
-                            <div class="form-group">
-                                <label class="control-sidebar-subheading">
-                                    Expose author name in posts
-                                <input type="checkbox" class="pull-right" checked>
-                                </label>
-                                <p>
-                                    Allow the user to show his name in blog posts
-                                </p>
-                            </div>
-                            <!-- /.form-group -->
-                            <h3 class="control-sidebar-heading">Chat Settings</h3>
-                            <div class="form-group">
-                                <label class="control-sidebar-subheading">
-                                    Show me as online
-                                <input type="checkbox" class="pull-right" checked>
-                                </label>
-                            </div>
-                            <!-- /.form-group -->
-                            <div class="form-group">
-                                <label class="control-sidebar-subheading">
-                                    Turn off notifications
-                                <input type="checkbox" class="pull-right">
-                                </label>
-                            </div>
-                            <!-- /.form-group -->
-                            <div class="form-group">
-                                <label class="control-sidebar-subheading">
-                                    Delete chat history
-                                <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                                </label>
-                            </div>
-                            <!-- /.form-group -->
-                        </form>
-                    </div>
-                    <!-- /.tab-pane -->
-                </div>
-            </aside>
-            <!-- /.control-sidebar -->
-            <!-- Add the sidebar's background. This div must be placed
-immediately after the control sidebar -->
-            <div class="control-sidebar-bg"></div>
+
         </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.0
+            </div>
+            <strong>Copyright &copy; 2015 <a href="http://balancika.com">Balancika Outsourcing</a>.</strong> All rights reserved.
+        </footer>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-user bg-yellow"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                                    <p>New phone +1(800)555-1234</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                                    <p>nora@example.com</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                                    <p>Execution time 5 seconds</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Custom Template Design
+                                    <span class="label label-danger pull-right">70%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Update Resume
+                                    <span class="label label-success pull-right">95%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Laravel Integration
+                                    <span class="label label-warning pull-right">50%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Back End Framework
+                                    <span class="label label-primary pull-right">68%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Some information about this general settings option
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Allow mail redirect
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Other sets of options are available
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Expose author name in posts
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Allow the user to show his name in blog posts
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                        <h3 class="control-sidebar-heading">Chat Settings</h3>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Show me as online
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Turn off notifications
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Delete chat history
+                                <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+
         <!-- ./wrapper -->
         <!-- jQuery 2.1.4 -->
         <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
@@ -600,7 +548,7 @@ immediately after the control sidebar -->
         <script src="dist/js/demo.js"></script>
         <script>
             $(document).ready(function () {
-                $("#datetimepicker").kendodatetimepicker();
+                $('.datepicker').datepicker();
             });
         </script>
     </form>

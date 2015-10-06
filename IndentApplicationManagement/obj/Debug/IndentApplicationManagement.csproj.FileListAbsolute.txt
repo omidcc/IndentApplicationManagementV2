@@ -29,3 +29,13 @@ E:\Balancika Project\Project 1\IndentApplicationManagement\IndentApplicationMana
 E:\Balancika Project\Project 1\IndentApplicationManagement\IndentApplicationManagement\obj\Debug\IndentApplicationManagement.dll
 E:\Balancika Project\Project 1\IndentApplicationManagement\IndentApplicationManagement\obj\Debug\IndentApplicationManagement.pdb
 E:\Balancika Project\Project 1\IndentApplicationManagement\IndentApplicationManagement\obj\Debug\IndentApplicationManagement.csprojResolveAssemblyReference.cache
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\bin\IndentApplicationManagement.dll.config
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\bin\IndentApplicationManagement.dll
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\bin\IndentApplicationManagement.pdb
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\bin\Newtonsoft.Json.dll
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\bin\Telerik.Web.Device.Detection.xml
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\bin\Telerik.Web.UI.xml
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\obj\Debug\IndentApplicationManagement.csprojResolveAssemblyReference.cache
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\obj\Debug\IndentApplicationManagement.dll.licenses
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\obj\Debug\IndentApplicationManagement.dll
+D:\Indent\IndentApplicationManagementV2\IndentApplicationManagement\obj\Debug\IndentApplicationManagement.pdb
