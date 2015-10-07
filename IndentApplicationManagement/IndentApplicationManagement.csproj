@@ -262,6 +262,7 @@
     <Content Include="Content\DataTables\swf\flashExport.swf" />
     <Content Include="DatePickerTester.aspx" />
     <Content Include="Demo.asmx" />
+    <Content Include="Department.aspx" />
     <Content Include="GridPage.aspx" />
     <Content Include="index.html" />
     <Content Include="Kendo\examples\actionsheet\index.html" />
@@ -3562,7 +3563,6 @@
     <Content Include="Kendo\styles\fonts\DejaVu\DejaVuSerif.ttf" />
     <Content Include="Kendo\styles\images\kendoui.ttf" />
     <Content Include="Kendo\styles\images\kendoui.woff" />
-    <None Include="Scripts\jquery-1.7.2.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
     <Content Include="Scripts\DataTables\autoFill.foundation.js" />
@@ -3611,8 +3611,6 @@
     <Content Include="Scripts\DataTables\dataTables.select.min.js" />
     <Content Include="Scripts\DataTables\jquery.dataTables.js" />
     <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
-    <Content Include="Scripts\jquery-1.7.2.js" />
-    <Content Include="Scripts\jquery-1.7.2.min.js" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -4513,6 +4511,13 @@
     <Compile Include="Demo.asmx.cs">
       <DependentUpon>Demo.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Department.aspx.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Department.aspx.designer.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridPage.aspx.cs">
       <DependentUpon>GridPage.aspx</DependentUpon>

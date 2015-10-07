@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BillingApplication;
 using IndentApplicationManagement.Bll.Base;
+using IndentApplicationManagement.Dal.Base;
 
 namespace IndentApplicationManagement
 {
@@ -17,7 +18,23 @@ namespace IndentApplicationManagement
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.LoadTable();
+        }
+       
+        
+      
+        public void LoadTable()
+        {
             
+           
+            try
+            {
+             
+            }
+            catch(Exception exception)
+            {
+                Alert.Show(exception.Message);
+            }
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -25,11 +42,13 @@ namespace IndentApplicationManagement
             CompanyBase newCompany=new CompanyBase();
 
             newCompany.CompanyName = companyNameTextBox.Value;
+           
             newCompany.Address = addressTextBox.Value;
             newCompany.Phone = phoneNoTextBox.Value;
             newCompany.Email = emailTextBox.Value;
             newCompany.Web = webTextBox.Value;
             newCompany.LogoPath = logopathTextBox.Value;
+
             newCompany.UpdateBy = int.Parse(updateByTextBox.Value);
             newCompany.UpdateDate = DateTime.Parse(datetimepicker.Value);
             newCompany.IsActive = isActiveCheckBox.Checked;

@@ -15,6 +15,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="Content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -43,12 +44,10 @@ folder instead of downloading all of them to reduce the load. -->
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
     <link href="Kendo/styles/kendo.rtl.css" rel="stylesheet" />
-    <link href="Kendo/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet" />
-    <link href="Kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+   
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <form runat="server" class="form-group" role="form">
+    <form runat="server" class="form-group" data-toggle="validator" role="form" >
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
 
         <div class="wrapper">
@@ -257,94 +256,14 @@ folder instead of downloading all of them to reduce the load. -->
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <div class="container form-horizontal">
-                    <form id="divClass">
+                  
                         <div>
                             <h1><strong>Add your Comapny here</strong></h1>
                             <br />
                             <br />
                             <br />
                         </div>
-                        <%-- <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-condensed">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="companyNameTextBox" class="col-sm-2 control-label">Company Name</label>
-                                            <input type="text" id="companyNameTextBox" placeholder="Company Name" class="form-control" runat="server" clientidmode="Static" /><telerik:RadTextBox ID="RadTextBox1" runat="server"></telerik:RadTextBox>
 
-                                        </div>
-                                    </td>
-                                    <td></td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="addressTextBox" class="col-sm-2 control-label">Address</label>
-                                            <input type="text" id="addressTextBox" placeholder="Address" class="form-control" runat="server" clientidmode="Static" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Phone </label>
-                                            <input type="text" id="phoneNoTextBox" placeholder="Phone" class="form-control" runat="server" clientidmode="Static" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Email</label>
-                                            <input type="email" id="emailTextBox" placeholder="Email" class="form-control" runat="server" clientidmode="Static" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Web</label>
-                                            <input type="text" id="webTextBox" placeholder="Web" class="form-control" runat="server" clientidmode="Static" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Logo Path</label>
-                                            <input type="text" id="logopathTextBox" placeholder="Logo Path" class="form-control" runat="server" clientidmode="Static" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Update By</label>
-                                            <input type="text" ID="updateByTextBox" placeholder="Upadet By" class="form-control" runat="server" clientidmode="Static" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Update Date</label>
-                                            <input id="datetimepicker" data-provide="datepicker" runat="server" clientidmode="Static" style="width: 20%;" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Is Active ? </label>
-                                            <asp:CheckBox ID="isActiveCheckBox" class="checkbox" runat="server" />
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>--%>
 
 
                         <div class="form-group responsive-bootstrap-section">
@@ -364,15 +283,14 @@ folder instead of downloading all of them to reduce the load. -->
                         <div class="form-group ">
                             <label for="phoneNoTextBox" class="col-sm-2 control-label">Phone Number</label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" width="60px" id="phoneNoTextBox" placeholder="Phone Number" runat="server"  />
+                                <input type="text" class="form-control" width="60px" id="phoneNoTextBox" placeholder="Phone Number" runat="server" />
                             </div>
 
                         </div>
                         <div class="form-group ">
                             <label for="emailTextBox" class="col-sm-2 control-label">Email</label>
                             <div class="col-xs-4">
-                                <input type="email"
-                                    data-fv-emailaddress-message="The value is not a valid email address" class="form-control" width="60px" id="emailTextBox" placeholder="Email" runat="server" clientidmode="static" />
+                                <input type="email" class="form-control" id="emailTextBox" name="email" required data-error=" that email address is invalid" placeholder="Enter a valid email address" runat="server" />
                             </div>
 
                         </div>
@@ -386,7 +304,7 @@ folder instead of downloading all of them to reduce the load. -->
                         <div class="form-group ">
                             <label for="logopathTextBox" class="col-sm-2 control-label">Logo Path</label>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" width="60px" id="logopathTextBox" placeholder="" runat="server"  />
+                                <input type="text" class="form-control" width="60px" id="logopathTextBox" placeholder="" runat="server" />
                             </div>
 
                         </div>
@@ -394,7 +312,8 @@ folder instead of downloading all of them to reduce the load. -->
                         <div class="form-group">
                             <label for="updateByTextBox" class="col-sm-2 control-label">Update By</label>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" width="60px" id="updateByTextBox" placeholder="" runat="server"  />
+                                <input type="text" class="form-control" width="60px" id="updateByTextBox" placeholder="" runat="server" />
+                              
                             </div>
 
                         </div>
@@ -410,7 +329,7 @@ folder instead of downloading all of them to reduce the load. -->
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" id="isActiveCheckBox" runat="server" value="false" />
-                                        Is Active
+                                        <strong>Is Active</strong>
                                     </label>
                                 </div>
                             </div>
@@ -423,8 +342,42 @@ folder instead of downloading all of them to reduce the load. -->
                                 <input class="btn btn-warning" runat="server" onserverclick="btnClear_Click" type="button" value="Clear Information" />
                             </div>
                         </div>
-                    </form>
 
+
+                 
+
+                    <div>
+                        <h1>Company Information Details</h1>
+                        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Company Name</th>
+                                    <th>Address</th>
+                                    <th>Phone Number</th>
+                                    <th>Email</th>
+                                    <th>Web Address</th>
+                                    <th>Logo Path</th>
+                                    <th>Update By</th>
+                                    <th>Update Date</th>
+                                    <th>Is Active</th>
+                                </tr>
+                            </thead>
+                           
+                            <tfoot>
+                                <tr>
+                                    <th>Company Name</th>
+                                    <th>Address</th>
+                                    <th>Phone Number</th>
+                                    <th>Email</th>
+                                    <th>Web Address</th>
+                                    <th>Logo Path</th>
+                                    <th>Update By</th>
+                                    <th>Update Date</th>
+                                    <th>Is Active</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
 
 
@@ -618,6 +571,8 @@ immediately after the control sidebar -->
         </script>
         <!-- Bootstrap 3.3.5 -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="Scripts/DataTables/jquery.dataTables.min.js"></script>
+        <script src="Scripts/DataTables/dataTables.bootstrap.min.js"></script>
         <!-- Morris.js charts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="plugins/morris/morris.min.js"></script>
@@ -646,12 +601,17 @@ immediately after the control sidebar -->
         <!-- AdminLTE for demo purposes -->
         <script src="dist/js/demo.js"></script>
         <script src="Kendo/examples/content/shared/js/products.js"></script>
+        <script src="Kendo/js/jquery.min.js"></script>
+     
 
         <script>
 
             $(document).ready(function () {
 
-                $("#divClass").formValidation();
+             
+                $('#example').DataTable();
+              
+               
             });
 
         </script>

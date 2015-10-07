@@ -115,5 +115,7 @@ namespace IndentApplicationManagement.Bll.Base
 
 			return objCompany;
 		}
+
+	   
 	}
 }
