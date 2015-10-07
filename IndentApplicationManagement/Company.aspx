@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Company.aspx.cs" Inherits="IndentApplicationManagement.Company" %>
+
 <%@ Import Namespace="System.Windows.Forms" %>
 
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
@@ -41,10 +42,10 @@ folder instead of downloading all of them to reduce the load. -->
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-  <link href="Kendo/styles/kendo.rtl.css" rel="stylesheet" />
-        <link href="Kendo/styles/kendo.common.min.css" rel="stylesheet" />
-        <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet" />
-        <link href="Kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="Kendo/styles/kendo.rtl.css" rel="stylesheet" />
+    <link href="Kendo/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet" />
+    <link href="Kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <form runat="server" class="form-group" role="form">
@@ -255,11 +256,15 @@ folder instead of downloading all of them to reduce the load. -->
             </aside>
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                <div class="container">
-                    <div>
-                        <h1><strong>Add your Comapny here</strong></h1>
-                    </div>
-                    <div class="table-responsive">
+                <div class="container form-horizontal">
+                    <form id="divClass">
+                        <div>
+                            <h1><strong>Add your Comapny here</strong></h1>
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                        <%-- <div class="table-responsive">
                         <table class="table table-striped table-bordered table-condensed">
                             <tbody>
                                 <tr>
@@ -339,211 +344,268 @@ folder instead of downloading all of them to reduce the load. -->
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-                <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
-    </div>
-  </div>
-
-            </div>
+                    </div>--%>
 
 
-        </div>
+                        <div class="form-group responsive-bootstrap-section">
+                            <label for="companyNameTextBox" class="col-sm-2 control-label">Company Name</label>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" width="60px" id="companyNameTextBox" placeholder="Name" runat="server" />
+                            </div>
 
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 2.3.0
-            </div>
-            <strong>Copyright &copy; 2015 <a href="http://balancika.com">Balancika Outsourcing</a>.</strong> All rights reserved.
-        </footer>
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Create the tabs -->
-            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- Home tab content -->
-                <div class="tab-pane" id="control-sidebar-home-tab">
-                    <h3 class="control-sidebar-heading">Recent Activity</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript::;">
-                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                                    <p>Will be 23 on April 24th</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript::;">
-                                <i class="menu-icon fa fa-user bg-yellow"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                                    <p>New phone +1(800)555-1234</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript::;">
-                                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                                    <p>nora@example.com</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript::;">
-                                <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                                    <p>Execution time 5 seconds</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript::;">
-                                <h4 class="control-sidebar-subheading">Custom Template Design
-                                    <span class="label label-danger pull-right">70%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript::;">
-                                <h4 class="control-sidebar-subheading">Update Resume
-                                    <span class="label label-success pull-right">95%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript::;">
-                                <h4 class="control-sidebar-subheading">Laravel Integration
-                                    <span class="label label-warning pull-right">50%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript::;">
-                                <h4 class="control-sidebar-subheading">Back End Framework
-                                    <span class="label label-primary pull-right">68%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-                </div>
-                <!-- /.tab-pane -->
-                <!-- Stats tab content -->
-                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-                <!-- /.tab-pane -->
-                <!-- Settings tab content -->
-                <div class="tab-pane" id="control-sidebar-settings-tab">
-                    <form method="post">
-                        <h3 class="control-sidebar-heading">General Settings</h3>
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Report panel usage
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                            <p>
-                                Some information about this general settings option
-                            </p>
                         </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Allow mail redirect
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                            <p>
-                                Other sets of options are available
-                            </p>
+                        <div class="form-group responsive-bootstrap-section">
+                            <label for="addressTextBox" class="col-sm-2 control-label">Address</label>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" width="60px" id="addressTextBox" placeholder="Address" runat="server" />
+                            </div>
+
                         </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Expose author name in posts
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                            <p>
-                                Allow the user to show his name in blog posts
-                            </p>
+                        <div class="form-group ">
+                            <label for="phoneNoTextBox" class="col-sm-2 control-label">Phone Number</label>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" width="60px" id="phoneNoTextBox" placeholder="Phone Number" runat="server"  />
+                            </div>
+
                         </div>
-                        <!-- /.form-group -->
-                        <h3 class="control-sidebar-heading">Chat Settings</h3>
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Show me as online
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
+                        <div class="form-group ">
+                            <label for="emailTextBox" class="col-sm-2 control-label">Email</label>
+                            <div class="col-xs-4">
+                                <input type="email"
+                                    data-fv-emailaddress-message="The value is not a valid email address" class="form-control" width="60px" id="emailTextBox" placeholder="Email" runat="server" clientidmode="static" />
+                            </div>
+
                         </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Turn off notifications
-                                <input type="checkbox" class="pull-right">
-                            </label>
+                        <div class="form-group ">
+                            <label for="webTextBox" class="col-sm-2 control-label">Web Address</label>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" width="60px" id="webTextBox" placeholder="Web Address" runat="server" />
+                            </div>
+
                         </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Delete chat history
-                                <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                            </label>
+                        <div class="form-group ">
+                            <label for="logopathTextBox" class="col-sm-2 control-label">Logo Path</label>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" width="60px" id="logopathTextBox" placeholder="" runat="server"  />
+                            </div>
+
                         </div>
-                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label for="updateByTextBox" class="col-sm-2 control-label">Update By</label>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" width="60px" id="updateByTextBox" placeholder="" runat="server"  />
+                            </div>
+
+                        </div>
+                        <div class="form-group ">
+                            <label for="datetimepicker" class="col-sm-2 control-label">Update Date</label>
+                            <div class="col-lg-4">
+                                <input data-provide="datepicker" class="form-control" width="60px" id="datetimepicker" placeholder="" runat="server" clientidmode="static" />
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="isActiveCheckBox" runat="server" value="false" />
+                                        Is Active
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <input class="btn btn-success" runat="server" onserverclick="btnSave_Click" type="button" value="Save Company Information" />
+                                <input class="btn btn-warning" runat="server" onserverclick="btnClear_Click" type="button" value="Clear Information" />
+                            </div>
+                        </div>
                     </form>
+
                 </div>
-                <!-- /.tab-pane -->
+
+
+
+
+
+
             </div>
-        </aside>
-        <!-- /.control-sidebar -->
-        <!-- Add the sidebar's background. This div must be placed
+
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> 2.3.0
+                </div>
+                <strong>Copyright &copy; 2015 <a href="http://balancika.com">Balancika Outsourcing</a>.</strong> All rights reserved.
+            </footer>
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Create the tabs -->
+                <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                    <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                    <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- Home tab content -->
+                    <div class="tab-pane" id="control-sidebar-home-tab">
+                        <h3 class="control-sidebar-heading">Recent Activity</h3>
+                        <ul class="control-sidebar-menu">
+                            <li>
+                                <a href="javascript::;">
+                                    <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                                    <div class="menu-info">
+                                        <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                        <p>Will be 23 on April 24th</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript::;">
+                                    <i class="menu-icon fa fa-user bg-yellow"></i>
+                                    <div class="menu-info">
+                                        <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                                        <p>New phone +1(800)555-1234</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript::;">
+                                    <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                                    <div class="menu-info">
+                                        <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                                        <p>nora@example.com</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript::;">
+                                    <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                                    <div class="menu-info">
+                                        <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                                        <p>Execution time 5 seconds</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.control-sidebar-menu -->
+                        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                        <ul class="control-sidebar-menu">
+                            <li>
+                                <a href="javascript::;">
+                                    <h4 class="control-sidebar-subheading">Custom Template Design
+                                    <span class="label label-danger pull-right">70%</span>
+                                    </h4>
+                                    <div class="progress progress-xxs">
+                                        <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript::;">
+                                    <h4 class="control-sidebar-subheading">Update Resume
+                                    <span class="label label-success pull-right">95%</span>
+                                    </h4>
+                                    <div class="progress progress-xxs">
+                                        <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript::;">
+                                    <h4 class="control-sidebar-subheading">Laravel Integration
+                                    <span class="label label-warning pull-right">50%</span>
+                                    </h4>
+                                    <div class="progress progress-xxs">
+                                        <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript::;">
+                                    <h4 class="control-sidebar-subheading">Back End Framework
+                                    <span class="label label-primary pull-right">68%</span>
+                                    </h4>
+                                    <div class="progress progress-xxs">
+                                        <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.control-sidebar-menu -->
+                    </div>
+                    <!-- /.tab-pane -->
+                    <!-- Stats tab content -->
+                    <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                    <!-- /.tab-pane -->
+                    <!-- Settings tab content -->
+                    <div class="tab-pane" id="control-sidebar-settings-tab">
+                        <form method="post">
+                            <h3 class="control-sidebar-heading">General Settings</h3>
+                            <div class="form-group">
+                                <label class="control-sidebar-subheading">
+                                    Report panel usage
+                                <input type="checkbox" class="pull-right" checked>
+                                </label>
+                                <p>
+                                    Some information about this general settings option
+                                </p>
+                            </div>
+                            <!-- /.form-group -->
+                            <div class="form-group">
+                                <label class="control-sidebar-subheading">
+                                    Allow mail redirect
+                                <input type="checkbox" class="pull-right" checked>
+                                </label>
+                                <p>
+                                    Other sets of options are available
+                                </p>
+                            </div>
+                            <!-- /.form-group -->
+                            <div class="form-group">
+                                <label class="control-sidebar-subheading">
+                                    Expose author name in posts
+                                <input type="checkbox" class="pull-right" checked>
+                                </label>
+                                <p>
+                                    Allow the user to show his name in blog posts
+                                </p>
+                            </div>
+                            <!-- /.form-group -->
+                            <h3 class="control-sidebar-heading">Chat Settings</h3>
+                            <div class="form-group">
+                                <label class="control-sidebar-subheading">
+                                    Show me as online
+                                <input type="checkbox" class="pull-right" checked>
+                                </label>
+                            </div>
+                            <!-- /.form-group -->
+                            <div class="form-group">
+                                <label class="control-sidebar-subheading">
+                                    Turn off notifications
+                                <input type="checkbox" class="pull-right">
+                                </label>
+                            </div>
+                            <!-- /.form-group -->
+                            <div class="form-group">
+                                <label class="control-sidebar-subheading">
+                                    Delete chat history
+                                <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                                </label>
+                            </div>
+                            <!-- /.form-group -->
+                        </form>
+                    </div>
+                    <!-- /.tab-pane -->
+                </div>
+            </aside>
+            <!-- /.control-sidebar -->
+            <!-- Add the sidebar's background. This div must be placed
 immediately after the control sidebar -->
-        <div class="control-sidebar-bg"></div>
+            <div class="control-sidebar-bg"></div>
+        </div>
 
         <!-- ./wrapper -->
         <!-- jQuery 2.1.4 -->
@@ -558,7 +620,7 @@ immediately after the control sidebar -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- Morris.js charts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-       <script src="plugins/morris/morris.min.js"></script>
+        <script src="plugins/morris/morris.min.js"></script>
         <!-- Sparkline -->
         <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
         <!-- jvectormap -->
@@ -589,13 +651,13 @@ immediately after the control sidebar -->
 
             $(document).ready(function () {
 
-                $('.datepicker').datepicker();
+                $("#divClass").formValidation();
             });
 
-         </script>
-          
-      
-       
+        </script>
+
+
+
 
 
     </form>

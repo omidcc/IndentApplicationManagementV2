@@ -24,7 +24,7 @@ namespace IndentApplicationManagement
         {
             CompanyBase newCompany=new CompanyBase();
 
-            newCompany.CompanyName = "";
+            newCompany.CompanyName = companyNameTextBox.Value;
             newCompany.Address = addressTextBox.Value;
             newCompany.Phone = phoneNoTextBox.Value;
             newCompany.Email = emailTextBox.Value;
